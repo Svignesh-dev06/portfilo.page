@@ -1,0 +1,406 @@
+
+:root{
+    --bg-main: rgb(14, 14, 29);
+    --bg-card: rgb(18, 18, 35);
+    --buton-main: linear-gradient(aqua,blueviolet);
+    --buton-card: linear-gradient(aqua);
+    --font-main: aqua;
+    --font-sub: white;
+    --buton-sub:blueviolet;
+    --base-one:blue;
+}
+:root{
+      --bg: #0b0f14;
+      --bg-soft: #10161d;
+      --text: #e6e9ee;
+      --muted: #a9b0bd;
+      --accent: #8b5cf6; /* violet */
+      --accent-2: #22d3ee; /* cyan */
+      --card: rgba(18, 24, 32, 0.7);
+      --border: rgba(255,255,255,0.06);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 16px;
+      --maxw: 1200px;
+    }
+*{
+    scrollbar-arrow-color: aqua;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-main);
+    color: white;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+   
+    scroll-behavior: smooth;
+}
+
+@keyframes op{
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+/*header & navigation*/
+.head{
+    border-bottom: 1px solid rgba(0, 255, 255, 0.638);
+    padding: 1%;
+    width: 100% !important;
+    position: fixed;
+    z-index: 1;
+    scroll-margin-top: 10px;
+    top: 0%;
+    left: 0%;
+    background: var(--bg-main);
+    padding-top: 0% !important;
+    margin-top: 0% !important;
+   backdrop-filter: blur(10px);
+   height: 130px; animation: 2s op ease-in-out alternate;
+}
+.main{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   
+    
+    
+}
+.head h1{
+    display: block;
+    font-size: xx-large;
+    
+}
+.dot{
+    display: inline-block;
+    margin: 3px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px aqua;
+    background: var(--buton-main);
+    animation: 5s rotate ease-in infinite;
+}
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.head nav{
+    display: block;
+    padding: 10px;
+    
+}
+.head nav a{
+    color: rgba(202, 202, 252, 0.821) ;
+    text-decoration: none;
+    padding: 5px;
+    
+}
+.head nav a:hover{
+    color: white;
+}
+.con:hover{
+    color: white;
+    box-shadow: 0 0 3px rgba(0, 255, 255, 0.518);
+    transform: scale(1.1);
+}
+/*hero img,skillimg,self about me*/
+.myimg{
+    width: 350px;
+    height: 350px;
+    background: var(--bg-card);
+    position: relative;
+    border-radius: 20px;
+    bottom: 20px;
+    
+}
+.myimg img{
+    width: 300px;
+    height: 300px;
+    padding: 23px;
+    position: absolute;
+    border-radius: 30px;
+}
+.welcomepage{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 250px;
+    position: relative;
+     animation: 2s op ease-in-out alternate;
+
+}
+.welcon{
+    display: flex;
+
+}
+.welcon h1,h3{
+    gap: 0%;
+    margin: 0%;
+    padding: 0%
+}
+ .welcomepage .welcon{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+ .welcon .wel{
+    font-size: xx-large;
+
+}
+.wel span{
+    color: aqua;
+    text-shadow: 0 0 10px aqua;
+    
+    
+}
+.ab{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.ab h3{
+    border: 1px solid rgba(166, 0, 255, 0.853);
+    padding: 15px;
+    border-radius: 20px;
+    
+}
+.skillsimg img{
+
+    width: 90px;
+    height: 100px;
+    position: relative;
+    animation: mov 5s ease-in infinite;
+    transform: rotateX('150deg');
+    margin-top: 10px;
+}
+@keyframes mov{
+    0%{
+        transform: translatey(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.img1{
+    position: absolute;
+   
+    transform: rotate('100deg');
+    transition: 5s ease-in inherit;
+}
+.img2{
+    position: absolute;
+    top: 200px;
+}
+.img3{
+    position: absolute;
+    height: 90px !important;
+}
+.img4{
+    position: absolute;
+    top: 200px;
+}
+.img5{
+    position: absolute;
+}
+.img1:hover{
+    
+      box-shadow: 0px 0px 0px ;
+}
+.img2:hover{
+    box-shadow: 0px 0px 0px ;
+}
+.img3:hover{
+    box-shadow: 0px 0px 0px ;
+}
+.img4:hover{
+    box-shadow: 0px 0px 0px ;
+}
+.img5:hover{
+    box-shadow: 0px 0px 0px ;
+}
+
+.per1{
+    width: 300px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.329);
+    border-radius: 10px;
+    position: relative;
+    background: linear-gradient(aqua,darkblue);
+    
+}
+.skil{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    width: fit-content;
+    justify-content: center;
+}
+.skil span{
+    flex-grow: 1;
+    
+}
+
+
+#resume{
+    scroll-margin-top: 130px;
+}
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+.edu1,.edu2,.edu3{
+background-color: rgb(18, 20, 42);
+text-align: center;
+padding: 20px;
+width: 80%;
+height: 170px;
+display: flex;
+flex-direction: column;
+}
+.edu1:hover,.edu2:hover,.edu3:hover{
+    box-shadow: 0 0 10px rgb(204, 0, 255);
+    border-radius: 10px;
+    transform: scale(0.-95);
+}
+.education h5:hover{
+    color: aqua;
+    transform: scale(1.1);
+
+}
+.per{
+    width: 350px;
+    background-color: rgba(0, 255, 255, 0.744);
+    height: 20px;
+    position: relative;
+    border-radius: px;
+    color: black;
+}
+.ab .doth{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color:linear-gradient(aqua,blueviolet,blue);
+}
+@media screen and (max-width:600px) {
+    .welcomepage{
+        flex-direction: column;
+        margin-top: 150px;
+        align-items: center;
+    } 
+}
+.skillper{
+
+    display: flex;
+    align-items: space-between;
+    gap: 70px;
+    flex-basis: 23%;
+    flex-wrap: wrap;
+    font-size: small;
+}
+.skillper
+.pers{
+    width: 250px;
+    border-radius: 20px;
+    height: 20px;
+    background: linear-gradient( rgb(112, 254, 254),rgba(0, 0, 139, 0.453),rgb(184, 255, 255));
+}
+.skillper{
+    display: flex;
+    justify-content: space-around;
+    
+    padding: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--bg-card);
+    margin: 20px;
+    border-radius: 20px;    
+   
+
+}
+.skillper:hover{
+     box-shadow: 0 0 10px rgba(230, 0, 255, 0.518);
+}
+.skill{
+    margin: 10px;
+}
+.bar{
+    width: 400px;
+    height: 14px;
+    background-color: black;
+    border-radius: 20px;
+    text-align: center;
+}
+.html,.css,.js,.tw,.Angular{
+    height: 100%;
+    background: linear-gradient(rgba(0, 255, 255, 0.762),rgba(137, 43, 226, 0.404));
+    border-radius: 20px;
+    
+    color:antiquewhite;
+    animation: width 1.5s ease-in-out;
+}
+@keyframes width{
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+.html{
+    width: 90%;
+}
+.css{
+    width: 85%;
+}
+.js{
+    width: 75%;
+}
+.tw{
+    width: 70%;
+}
+.Angular{
+    width: 65%;
+}
+.certificate{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px blue;
+    grid-template-rows: 300px 300px 300px;
+    gap: 20px;
+}
+.card1,.card2,.card3{
+    display: flex;
+
+    flex-direction: column;
+    grid-area: 10px;
+
+}
+.card1 img{
+    width:230px ;
+    height:230px ;
+    background-size: cover;
+}
+.card2 img{
+    width:230px ;
+    height:230px ;
+    background-size: cover;
+}
+.card3 img{
+    width: 230px;
+    height: 230px;
+    background-size: cover;
+}
